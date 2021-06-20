@@ -33,7 +33,7 @@ const upload = multer({ storage: storage }).single('file')
 
 
 app.post('/upload',  (req, res) => {
-    console.log("req:", req);
+    //console.log("req:", req);
     upload(req, res, (err) => {
         if (err) {
             console.log("err:", err);
