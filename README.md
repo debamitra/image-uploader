@@ -23,8 +23,7 @@
 ## Steps to run:
 - Clone project
 - > npm install
-- run > npm run start
-      > cd backend
+- run > npm run start-client
       > npm run start
 - goto http://localhost:3000
 
