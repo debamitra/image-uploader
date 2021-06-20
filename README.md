@@ -3,7 +3,7 @@
 
 
 ### devchallenges.io project
-Challenge: Create an Image Uploader application. Use any front-end libraries of your choice. Create your API. Don’t look at the existing solution. Fulfill user stories below:
+Challenge: Create an Image Uploader application. Use any front-end libraries of your choice. Create your API.  Fulfill user stories below:
 
 > User story: I can drag and drop an image to upload it
 
