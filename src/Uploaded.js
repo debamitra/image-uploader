@@ -22,6 +22,7 @@ const Uploaded = ({ name }) => {
                 <span className="textbox">{imageLink}</span>
                 <button className="copylink" onClick={handleClick}>Copy link</button>
             </div>
+            <a href="./">Upload another image?</a>
 
         </div>
     );
