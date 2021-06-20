@@ -1,7 +1,5 @@
 const express = require('express');
 
-const formidable = require('formidable');
-
 const fs = require('fs');
 
 const app = express();
