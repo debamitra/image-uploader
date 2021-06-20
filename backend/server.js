@@ -14,7 +14,7 @@ const http = require('http');
 
 const multer = require('multer')
 
-app.use(express.static('images'));
+app.use(express.static(__dirname));
 
 const buildPath = path.join(__dirname, '..', 'build');
 
@@ -22,7 +22,7 @@ app.use(express.static(buildPath));
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'images')
+        cb(null, __dirname)
     },
     filename: (req, file, cb) => {
         cb(null, Date.now() + '-' + file.originalname)
