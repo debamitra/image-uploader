@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 const Uploaded = ({ name }) => {
-    let imageLink = "http://localhost:8000/" + name;
+    let imageLink = process.env.REACT_APP_API_URI + '/'+ name;
 
     const handleClick = (event) => {
         event.preventDefault();

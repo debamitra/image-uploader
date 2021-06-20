@@ -11,7 +11,7 @@ const Upload = ({ getFileData, uploadingstateChange }) => {
         const data = new FormData();
         data.append('file', event.target.files[0]);
 
-        axios.post('http://localhost:8000/upload', data)
+        axios.post(`${process.env.REACT_APP_API_URI}/upload`, data)
             .then((res) => {
                 getFileData(res);
                 uploadingstateChange(false);

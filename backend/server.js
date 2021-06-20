@@ -14,6 +14,12 @@ const http = require('http');
 
 const multer = require('multer')
 
+app.use(express.static('images'));
+
+const buildPath = path.join(__dirname, '..', 'build');
+
+app.use(express.static(buildPath));
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'images')
@@ -25,9 +31,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage }).single('file')
 
-app.use(express.static('images'));
 
-app.post('/upload', (req, res) => {
+app.post('/upload',  (req, res) => {
     console.log("req:", req);
     upload(req, res, (err) => {
         if (err) {
@@ -37,14 +42,6 @@ app.post('/upload', (req, res) => {
         res.send(req.file);
     });
 });
-
-
-
-
-
-const buildPath = path.join(__dirname, '..', 'build');
-
-app.use(express.static(buildPath));
 
 
 const port = process.env.PORT || 5000;
